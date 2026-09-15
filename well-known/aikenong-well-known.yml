@@ -1,0 +1,255 @@
+generated: '2026-09-14'
+method: probed
+source: live probes of every host this record knows (website, English mirror, API gateway, app hosts)
+note: >-
+  Every named /.well-known path plus /apis.json and /apis.yml was probed on six Aikenong hosts on
+  2026-09-14. Nothing was served. www.aikenong.com.cn answers 403 to every /.well-known/* request
+  (nginx blocks the dot-prefixed path) and 404 to /apis.json. www.icanag.com (the English mirror of
+  the same site) and foreignapi4.aikenong.com.cn (the Spring Boot gateway the Aigengyun Enterprise
+  web app calls) answer honest JSON 404s. api.aikenong.com.cn serves a stock "Welcome to nginx!"
+  page dated 2019-01-16 and 404s every path. cloud.aikenong.com.cn is a Vue SPA catch-all: it
+  answered 200 with the same 1,259-byte app shell for every path INCLUDING the negative control, so
+  none of its 200s is a document. farm.aikenong.com.cn 301s everything to /h5/. hit_count is 0 and
+  NO WellKnown or SecurityTxt pointer is emitted — this file records an absence, not a presence.
+hit_count: 0
+hosts:
+- host: https://www.aikenong.com.cn
+  documents:
+  - path: /.well-known/security.txt
+    status: 000
+    note: connection failed on this path; every other /.well-known/* path on this host returned 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 000
+    note: connection failed; sibling paths on this host return 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/ucp.json
+    status: 403
+  - path: /.well-known/acp.json
+    status: 403
+  - path: /.well-known/aauth-resource.json
+    status: 403
+  - path: /.well-known/apis.json
+    status: 403
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aikenong-negative-control-7f3ab91c.json
+    status: 403
+    bytes: 571
+- host: https://www.icanag.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aikenong-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 143
+- host: https://foreignapi4.aikenong.com.cn
+  note: >-
+    The production API gateway the Aigengyun Enterprise ("agy") web app at cloud.aikenong.com.cn
+    calls; the base URL is hard-coded in that app's JavaScript bundle. It is a real first-party
+    Spring Boot service that returns structured JSON 404s, but it publishes no contract:
+    /openapi.json, /swagger.json, /v2/api-docs, /v3/api-docs, /doc.html, /swagger-ui.html,
+    /swagger-resources, /actuator/health and /graphql all 404.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aikenong-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 172
+- host: https://api.aikenong.com.cn
+  note: >-
+    Resolves and answers 200 at "/" with the stock nginx/1.10.3 "Welcome to nginx!" default page,
+    Last-Modified 2019-01-16. Every other path 404s. This hostname is claimed but unconfigured; it
+    is not an API surface.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aikenong-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 571
+- host: https://cloud.aikenong.com.cn
+  note: >-
+    CATCH-ALL. A Vue single-page app that answers HTTP 200 with the identical 1,259-byte shell for
+    every path, including the negative control. None of its 200s is a document; all are discarded.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/ucp.json
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/acp.json
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/apis.json
+    status: 200
+    note: SPA shell, not a document
+  - path: /apis.json
+    status: 200
+    note: SPA shell, not a document
+  - path: /apis.yml
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: SPA shell, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    note: SPA shell, not a document
+  path_echo_control: failed
+  soft_404_control:
+    path: /.well-known/aikenong-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 1259
+- host: https://farm.aikenong.com.cn
+  note: Redirects every path to /h5/ (the Aigengyun Farm edition H5 app). No documents served.
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /.well-known/ucp.json
+    status: 301
+  - path: /.well-known/acp.json
+    status: 301
+  - path: /.well-known/aauth-resource.json
+    status: 301
+  - path: /.well-known/apis.json
+    status: 301
+  - path: /apis.json
+    status: 301
+  - path: /apis.yml
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aikenong-negative-control-7f3ab91c.json
+    status: 301
+    bytes: 178

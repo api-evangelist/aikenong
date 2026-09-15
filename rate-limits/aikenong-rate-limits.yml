@@ -1,0 +1,20 @@
+generated: '2026-09-14'
+method: searched
+source: https://www.aikenong.com.cn/
+limit_count: 0
+note: >-
+  No rate limits are documented, because no API is documented. Aikenong publishes no developer
+  portal, API reference or machine-readable contract, so there is no stated quota, window, burst
+  allowance, 429 behaviour or rate-limit response header to record. The one first-party API host
+  found (foreignapi4.aikenong.com.cn, the gateway the Aigengyun Enterprise web app calls) returns
+  a bare Spring Boot JSON 404 on every unauthenticated path and emits no X-RateLimit-* or
+  RateLimit-* headers on that response.
+headers: []
+evidence:
+- url: https://foreignapi4.aikenong.com.cn/
+  status: 404
+  finding: no RateLimit-* or X-RateLimit-* headers on the response
+- url: https://www.aikenong.com.cn/
+  status: 200
+  finding: no developer or API documentation section exists on the site
+rate_limits: []

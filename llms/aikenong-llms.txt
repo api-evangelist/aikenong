@@ -1,0 +1,61 @@
+# Aikenong (爱科农 / ICAN)
+
+> Beijing Aikenong Technology Co., Ltd. is a Chinese smart-agriculture company founded in 2016 and
+> headquartered in Chaoyang District, Beijing. It develops a proprietary plant-soil-atmosphere crop
+> growth model and the ICAN agronomy platform, combining satellite and UAV remote sensing, weather
+> and soil telemetry, and AI prediction into whole-season planting decision guidance for growers,
+> farming enterprises, seed and agri-input companies, and government agricultural programs.
+
+This file is maintained by API Evangelist (https://apievangelist.com) as part of an independent
+third-party profile. It is NOT published by Aikenong. Generated 2026-09-14 from the company's own
+public website plus live probes of its hosts.
+
+## API surface
+
+Aikenong publishes no developer program. As of 2026-09-14 there is no developer portal, no API
+reference, no SDK, no public webhook catalogue, and no machine-readable contract (OpenAPI, AsyncAPI,
+GraphQL SDL, Postman collection or JSON Schema) anywhere on aikenong.com.cn or icanag.com. Probes
+for /openapi.json, /swagger.json, /v2/api-docs, /v3/api-docs, /doc.html, /swagger-ui.html,
+/swagger-resources and /graphql returned 404 on every first-party host. There is no MCP server and
+no A2A agent card. Do not assume an API endpoint for this company; there is none to call.
+
+Hosts observed (2026-09-14):
+- www.aikenong.com.cn — Chinese marketing site (200)
+- www.icanag.com — English mirror of the same site (200)
+- cloud.aikenong.com.cn — Aigengyun Enterprise ("agy") web application, a Vue SPA (200, catch-all)
+- admin.aikenong.com.cn — "Ican Super System" internal console, a SPA (200, catch-all)
+- farm.aikenong.com.cn — Aigengyun Farm edition H5 application (301 to /h5/)
+- foreignapi4.aikenong.com.cn — the private Spring Boot gateway the Aigengyun Enterprise app
+  calls; real and first-party, but undocumented and publishing no contract (404 on all spec paths)
+- api.aikenong.com.cn — claimed but unconfigured; serves the stock nginx default page from 2019
+
+## Products
+
+- 爱耕耘 (Aigengyun) — whole-lifecycle smart planting decision tool for growers; iOS/Android app
+  and a WeChat mini program for planting plans and soil-fertility assessment
+- 爱耕耘企业版 (Aigengyun Enterprise) — digital management for scaled farming enterprises: plot
+  planning, field-operation execution, monitoring and cost accounting, with device ingestion for
+  four-situation monitoring, irrigation control, VR and farm-machinery tracks
+- 爱耕耘商务版 (Aigengyun Business) — digitization tool for traditional agri-input dealers
+- 艾格偌 (AIGROW) breeding information management system
+- 爱科农高产灌溉系统 — high-yield irrigation control system
+- Field hardware — weather stations, soil moisture stations, smart valves, dual-mode valve
+  controllers, fertigation controllers, greenhouse control hosts, phenotyping cameras, inspection
+  and cargo robots
+
+## Company
+
+- Website: https://www.aikenong.com.cn/
+- English site: https://www.icanag.com/
+- About: https://www.aikenong.com.cn/ican/about
+- News: https://www.aikenong.com.cn/ican/newsList
+- Contact: 400-6688256 · hr@icanag.com · Room 711, Building C, Jinchang'an Tower, Chaoyang
+  District, Beijing
+- Founded: 2016. Funding: more than CNY 100 million across Series A and A+, led by Source Code
+  Capital (A) and IDG Capital with GL Ventures (A+).
+- Reported reach: roughly ten Chinese provinces, 30,000+ growers.
+
+## Corrections
+
+This profile is independent and free to correct. Open an issue at
+https://github.com/api-evangelist/aikenong or email info@apievangelist.com.

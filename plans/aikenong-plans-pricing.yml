@@ -1,0 +1,21 @@
+generated: '2026-09-14'
+method: searched
+source: https://www.aikenong.com.cn/
+plan_count: 0
+note: >-
+  Aikenong publishes no pricing, plans or tiers of any kind. The site (www.aikenong.com.cn and its
+  English mirror www.icanag.com, both HTTP 200 on 2026-09-14) is a solutions-and-products marketing
+  site: every product page for Aigengyun, Aigengyun Enterprise, Aigengyun Business, the AIGROW
+  breeding system, the high-yield irrigation system and the field hardware catalogue ends in a
+  "get a solution" (获取方案) contact form, a sales phone number (400-6688256) and a downloadable
+  PDF brochure. There is no pricing page, no self-serve checkout, no free tier and no published
+  quota or overage schedule. Commercial terms are set in a sales conversation.
+pricing_model: contact-sales
+evidence:
+- url: https://www.aikenong.com.cn/
+  status: 200
+  finding: no pricing link in the site navigation or footer
+- url: https://www.aikenong.com.cn/ican/tool?index=1
+  status: 200
+  finding: Aigengyun Enterprise product page ends in a contact-sales form, no price
+plans: []

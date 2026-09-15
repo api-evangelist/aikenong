@@ -1,8 +1,21 @@
 aid: aikenong
 name: Aikenong
-description: 'Aikenong is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Aikenong (爱科农 / Beijing Aikenong Technology Co., Ltd., also trading internationally
+  as ICAN) is a Chinese smart-agriculture company founded in 2016 in Chaoyang District, Beijing.
+  It builds a proprietary plant-soil-atmosphere crop growth model and a data-driven agronomy
+  platform (ICAN) that combines satellite and UAV remote sensing, weather and soil telemetry, and
+  AI prediction into whole-season planting decision guidance for growers. Its product line spans
+  the Aigengyun (爱耕耘) grower app and WeChat mini program, Aigengyun Enterprise and Business
+  editions for farming enterprises and agri-input dealers, the AIGROW breeding information
+  management system, a high-yield irrigation control system, and a catalogue of field hardware
+  (weather stations, soil moisture stations, smart valves, fertigation controllers, greenhouse
+  controllers, phenotyping cameras and inspection robots). The company reports service across
+  roughly ten Chinese provinces and 30,000+ growers, and raised more than CNY 100 million in
+  Series A/A+ rounds led by Source Code Capital, IDG Capital and GL Ventures. It is a SaaS and
+  hardware vendor rather than an API vendor: no public developer program, API reference, SDK or
+  machine-readable contract is published anywhere on its own domains as of this profile.'
 url: https://raw.githubusercontent.com/api-evangelist/aikenong/refs/heads/main/apis.yml
+image: https://www.aikenong.com.cn/resource/website/images/icon.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +25,14 @@ created: '2026-09-14'
 modified: '2026-09-14'
 tags:
 - Company
+- Agriculture
+- AgTech
+- Smart Agriculture
+- Artificial Intelligence
+- Remote Sensing
+- Internet of Things
+- Data and Analytics
+- China
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,43 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aikenong-domain-security.yml
 - type: Website
+  url: https://www.aikenong.com.cn/
+- type: Blog
+  url: https://www.aikenong.com.cn/ican/newsList
+- type: SecondaryMarket
   url: https://equityzen.com/company/aikenong
+- type: Plans
+  url: plans/aikenong-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aikenong-rate-limits.yml
+- type: LLMsTxt
+  url: llms/aikenong-llms.txt
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Aikenong sells smart-agriculture SaaS, mobile apps and field hardware to growers and farming
+    enterprises and runs no developer program at all — its marketing site has no developer,
+    documentation or API section, the one real first-party API host (foreignapi4.aikenong.com.cn,
+    the gateway hard-coded into the Aigengyun Enterprise web app) 404s every spec path, and
+    api.aikenong.com.cn still serves the stock nginx default page installed in January 2019.
+  evidence:
+  - url: https://www.aikenong.com.cn/
+    status: 200
+  - url: https://foreignapi4.aikenong.com.cn/v3/api-docs
+    status: 404
+  - url: https://api.aikenong.com.cn/openapi.json
+    status: 404
+  - url: https://www.icanag.com/.well-known/apis.json
+    status: 404
+  - url: https://api.github.com/orgs/aikenong
+    status: 404
+  checked: '2026-09-14'
